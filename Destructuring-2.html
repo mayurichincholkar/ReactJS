@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<p id="demo"></p>
+  
+<script>
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021, 
+  color: 'red'
+}
+
+myVehicle(vehicleOne);
+// old way without destructuring
+// function myVehicle(vehicle) {
+//   const message = 'Without destructuring - My ' + vehicle.type + ' is a ' + vehicle.color + ' ' + vehicle.brand + ' ' + vehicle.model + '.';
+//   document.getElementById("demo").innerHTML = message;
+// }
+//with destructuring
+function myVehicle({type, color, brand, model}) {
+  const message = 'With destructuring - My ' + type + ' is a ' + color + ' ' + brand + ' ' + model + '.';
+
+  document.getElementById("demo").innerHTML = message;
+}
+</script>
+
+</body>
+</html>
